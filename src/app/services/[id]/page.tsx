@@ -102,23 +102,24 @@ const serviceData: Record<string, any> = {
     image:
     'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop'
   },
-  headlight: {
-    title: 'Headlight Restoration',
-    subtitle: 'Clear. Bright. Safe.',
+  'maintenance-membership': {
+    title: 'Maintenance Membership',
+    subtitle: 'Regular Ongoing Care',
     description:
-    'Restore foggy, yellowed headlights to improve appearance and night-time visibility for safer driving.',
-    price: '$69',
-    duration: '30 - 45 Minutes',
+    'Keep your vehicle in pristine condition year-round with our exclusive Maintenance Membership. Designed for clients who desire consistent, premium care, this program ensures your car always looks its best while preserving its value.',
+    price: 'Contact Us',
+    duration: 'Varies',
     features: [
-    'Oxidation removal',
-    'Multi-stage sanding',
-    'Polishing & clarity restoration',
-    'UV sealant application',
-    'Improved visibility',
-    'Enhanced appearance'],
+    'Monthly or bi-weekly service options',
+    'Discounted rates on premium services',
+    'Priority scheduling',
+    'Regular maintenance washes',
+    'Interior touch-ups',
+    'Tire and wheel care',
+    'Long-lasting protection checks'],
 
     image:
-    'https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=2070&auto=format&fit=crop'
+    'https://images.unsplash.com/photo-1542382103-625b0fb6c7c8?q=80&w=2070&auto=format&fit=crop'
   },
   engine: {
     title: 'Engine Bay Cleaning',
@@ -137,6 +138,25 @@ const serviceData: Record<string, any> = {
 
     image:
     'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2070&auto=format&fit=crop'
+  },
+  mold: {
+    title: 'Mold Remediation',
+    subtitle: 'Safe & Effective Removal',
+    description:
+    'Mold in your vehicle is not just unsightly, it is a serious health hazard. Our professional remediation service uses hospital-grade disinfectants and ozone treatment to safely eliminate mold at its source and restore a healthy environment.',
+    price: 'From $149',
+    duration: '3 - 5 Hours',
+    features: [
+    'Complete interior assessment',
+    'HEPA vacuuming of all surfaces',
+    'Hospital-grade disinfection',
+    'High-heat steam sterilization',
+    'Ozone air treatment',
+    'Deep extraction cleaning',
+    'Stain removal & sanitation'],
+
+    image:
+    'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop'
   },
   odor: {
     title: 'Odor Removal',
@@ -191,10 +211,10 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
 
           <div className="absolute inset-0 bg-gradient-to-b from-[#050B14]/80 via-[#050B14]/90 to-[#050B14]"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10 text-center text-sunrise-navy">
+        <div className="container mx-auto px-4 relative z-10 text-center text-white">
           <Link
             href="/services"
-            className="inline-flex items-center text-sunrise-navy/70 hover:text-sunrise-orange mb-6 transition-colors">
+            className="inline-flex items-center text-white/70 hover:text-sunrise-orange mb-6 transition-colors">
 
             <ArrowLeft size={20} className="mr-2" /> Back to Services
           </Link>

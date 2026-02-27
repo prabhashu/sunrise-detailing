@@ -1,7 +1,9 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Calendar, Truck, Sparkles, ThumbsUp } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
 const steps = [
 {
   icon: Calendar,
@@ -122,6 +124,13 @@ export function HowItWorks() {
               </motion.div>
             )}
           </div>
+        </div>
+        <div className="mt-16 text-center">
+          <Link href="/book">
+            <Button variant="primary" size="lg" icon={Calendar} className="px-8 shadow-[0_0_20px_rgba(255,138,0,0.2)]">
+              Book Online
+            </Button>
+          </Link>
         </div>
       </div>
     </section>);

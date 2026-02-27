@@ -16,8 +16,8 @@ export function Footer() {
                   className="w-full h-full object-cover" />
 
               </div>
-              <span className="text-xl font-bold">
-                SUNRISE <span className="text-sunrise-orange">DETAILING</span>
+              <span className="text-xl font-bold text-sunrise-orange">
+                SUNRISE <span className="text-sunrise-navy">DETAILING</span>
               </span>
             </Link>
             <p className="text-gray-500 mb-6 leading-relaxed">
@@ -149,10 +149,18 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/headlight"
+                  href="/services/maintenance-membership"
                   className="text-gray-500 hover:text-sunrise-navy transition-colors">
 
-                  Headlight Restoration
+                  Maintenance Membership
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/mold"
+                  className="text-gray-500 hover:text-sunrise-navy transition-colors">
+
+                  Mold Remediation
                 </Link>
               </li>
               <li>

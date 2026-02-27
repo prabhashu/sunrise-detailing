@@ -17,9 +17,9 @@ const features = [
 },
 {
   icon: ShieldCheck,
-  title: 'Care Beyond a Car Wash',
+  title: 'Long‑Lasting Protection',
   description:
-  'Every vehicle is treated with precision, not rushed through a line. We protect your investment.'
+  'Every vehicle is treated with precision and attention to detail. We protect your investment with care that lasts.'
 },
 {
   icon: Clock,
@@ -53,26 +53,7 @@ export function WhyChooseUs() {
             Why Tampa Bay Chooses{' '}
             <span className="text-sunrise-orange">Sunrise</span>
           </motion.h2>
-          <motion.p
-            initial={{
-              opacity: 0,
-              y: 20
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              delay: 0.1
-            }}
-            className="text-gray-600 max-w-2xl mx-auto text-lg">
 
-            We're not just washing cars. We're restoring and protecting your
-            vehicle with the highest level of care.
-          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

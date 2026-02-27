@@ -98,7 +98,7 @@ export function Hero() {
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link href="/book" className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#050B14] px-6 py-3.5 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg overflow-hidden w-full sm:w-auto transition-transform hover:scale-105">
                 <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black" />
-                <span className="relative">Book Experience</span>
+                <span className="relative">Book Now</span>
                 <ArrowRight className="relative w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a href="tel:+15551234567" className="group inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white px-6 py-3.5 md:px-8 md:py-4 rounded-full border border-white/10 font-bold text-base md:text-lg backdrop-blur-md w-full sm:w-auto transition-all hover:scale-105">

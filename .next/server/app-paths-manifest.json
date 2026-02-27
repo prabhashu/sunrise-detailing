@@ -1,8 +1,6 @@
 {
-  "/areas/page": "app/areas/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/book/page": "app/book/page.js",
+  "/services/[id]/page": "app/services/[id]/page.js",
   "/page": "app/page.js",
-  "/about/page": "app/about/page.js",
-  "/icon.svg/route": "app/icon.svg/route.js"
+  "/areas/page": "app/areas/page.js",
+  "/services/page": "app/services/page.js"
 }

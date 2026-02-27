@@ -3,6 +3,7 @@ import { Hero } from '@/components/Hero';
 import { WhyChooseUs } from '@/components/WhyChooseUs';
 import { ServicesOverview } from '@/components/ServicesOverview';
 import { HowItWorks } from '@/components/HowItWorks';
+import { PricingPackages } from '@/components/PricingPackages';
 import { ServiceAreas } from '@/components/ServiceAreas';
 import { Testimonials } from '@/components/Testimonials';
 import { FinalCTA } from '@/components/FinalCTA';
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Hero />
       <WhyChooseUs />
       <ServicesOverview />
+      <PricingPackages />
       <HowItWorks />
       <ServiceAreas />
       <Testimonials />

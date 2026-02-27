@@ -62,8 +62,8 @@ export function Navbar() {
               className="w-full h-full object-cover" />
 
           </div>
-          <span className="text-xl md:text-2xl font-extrabold tracking-tight text-white">
-            SUNRISE <span className="text-sunrise-orange">DETAILING</span>
+          <span className="text-xl md:text-2xl font-extrabold tracking-tight text-sunrise-orange">
+            SUNRISE <span className="text-white">DETAILING</span>
           </span>
         </Link>
 

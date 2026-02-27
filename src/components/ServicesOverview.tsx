@@ -9,7 +9,7 @@ import {
   Sparkles,
   Layers,
   Sun,
-  Zap,
+  CalendarCheck,
   Trash2,
   Truck,
   Gauge } from
@@ -47,28 +47,10 @@ const services = [
   desc: 'Long-term protection & hydrophobic gloss'
 },
 {
-  id: 'headlight',
-  icon: Zap,
-  title: 'Headlight Restoration',
-  desc: 'Restore clarity for safety & looks'
-},
-{
-  id: 'engine',
-  icon: Gauge,
-  title: 'Engine Bay Cleaning',
-  desc: 'Safe degreasing & dressing'
-},
-{
-  id: 'odor',
-  icon: Trash2,
-  title: 'Odor Removal',
-  desc: 'Eliminate smells at the source'
-},
-{
-  id: 'fleet',
-  icon: Truck,
-  title: 'Fleet & Commercial',
-  desc: 'Regular maintenance for business vehicles'
+  id: 'maintenance-membership',
+  icon: CalendarCheck,
+  title: 'Maintenance Membership',
+  desc: 'Regular ongoing care to maintain perfection'
 }];
 
 export function ServicesOverview() {
@@ -91,7 +73,7 @@ export function ServicesOverview() {
               }}
               className="text-sunrise-orange font-bold tracking-wider uppercase text-sm mb-2 block">
 
-              Our Expertise
+              Our Services
             </motion.span>
             <motion.h2
               initial={{
@@ -170,6 +152,13 @@ export function ServicesOverview() {
               </motion.div>
             </Link>
           )}
+        </div>
+        <div className="mt-16 text-center">
+          <Link href="/services">
+            <Button variant="primary" size="lg" icon={ArrowRight} className="px-8 shadow-[0_0_20px_rgba(255,138,0,0.2)]">
+              View More Services
+            </Button>
+          </Link>
         </div>
       </div>
     </section>);

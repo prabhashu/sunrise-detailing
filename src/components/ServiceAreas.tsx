@@ -1,7 +1,9 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Truck, Zap } from 'lucide-react';
+import Link from 'next/link';
+import { MapPin, Truck, Zap, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
 const areas = [
 {
   region: 'Core Tampa',
@@ -208,6 +210,14 @@ export function ServiceAreas() {
                   </ul>
                 </motion.div>
               )}
+            </div>
+
+            <div className="mt-10 flex justify-center lg:justify-start">
+              <Link href="/areas">
+                <Button variant="outline" size="lg" icon={ArrowRight} className="border-sunrise-navy text-sunrise-navy hover:bg-sunrise-navy hover:text-white">
+                  View All Service Areas
+                </Button>
+              </Link>
             </div>
           </motion.div>
 
