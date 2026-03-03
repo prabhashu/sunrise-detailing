@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { BookingPopup } from '@/components/BookingPopup';
 
 export const metadata: Metadata = {
   title: 'Sunrise Detailing',
@@ -19,6 +20,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <BookingPopup />
       </body>
     </html>
   );

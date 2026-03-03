@@ -334,7 +334,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
                   </div>
                 </div>
 
-                <Link href="/book" className="block w-full">
+                <Link href="?booking=true" className="block w-full">
                   <Button fullWidth size="lg" className="mb-4">
                     Book Now
                   </Button>

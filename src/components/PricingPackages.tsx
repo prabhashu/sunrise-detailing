@@ -89,7 +89,7 @@ export function PricingPackages() {
                   </li>
               )}
               </ul>
-              <Link href="/book" className="w-full">
+              <Link href="?booking=true" className="w-full">
                 <Button
                 variant={pkg.highlight ? 'primary' : 'outline'}
                 fullWidth

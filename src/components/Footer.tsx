@@ -92,7 +92,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/book"
+                  href="?booking=true"
                   className="text-gray-500 hover:text-sunrise-navy transition-colors">
 
                   Book Online

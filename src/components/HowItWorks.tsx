@@ -126,7 +126,7 @@ export function HowItWorks() {
           </div>
         </div>
         <div className="mt-16 text-center">
-          <Link href="/book">
+          <Link href="?booking=true">
             <Button variant="primary" size="lg" icon={Calendar} className="px-8 shadow-[0_0_20px_rgba(255,138,0,0.2)]">
               Book Online
             </Button>

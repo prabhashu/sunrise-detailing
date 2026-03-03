@@ -13,7 +13,7 @@ export default function ServiceAreasPage() {
         title={<>Service <span className="text-sunrise-orange">Areas</span></>}
         subtitle="We bring the detailing shop to your driveway. Covering the entire Tampa Bay area with our fully equipped mobile units."
       >
-        <Link href="/book">
+        <Link href="?booking=true">
           <Button size="lg">Check Availability</Button>
         </Link>
       </PageHero>

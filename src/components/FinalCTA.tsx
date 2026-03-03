@@ -33,7 +33,7 @@ export function FinalCTA() {
             Experience the difference of premium mobile detailing. Book your
             appointment today and let us bring the showroom shine to you.
           </p>
-          <Link href="/book">
+          <Link href="?booking=true">
             <Button
               variant="primary"
               size="lg"

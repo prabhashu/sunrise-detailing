@@ -78,7 +78,7 @@ export function Navbar() {
               {link.name}
             </Link>
           )}
-          <Link href="/book">
+          <Link href="?booking=true">
             <Button variant="primary" size="sm" icon={Phone}>
               Book Now
             </Button>
@@ -153,7 +153,7 @@ export function Navbar() {
                   </a>
                 </div>
 
-                <Link href="/book" className="block w-full">
+                <Link href="?booking=true" className="block w-full">
                   <Button variant="primary" size="lg" className="w-full justify-center !py-4 shadow-[0_0_20px_rgba(255,138,0,0.3)]">
                     Book Experience
                   </Button>
