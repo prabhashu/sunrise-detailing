@@ -128,7 +128,7 @@ function BookingPopupContent() {
                         required
                         options={[
                           { value: '', label: 'Select a package...' },
-                          { value: 'basic', label: 'Basic Maintenance ($89)' },
+                          { value: 'basic', label: 'Light Package ($89)' },
                           { value: 'premium', label: 'Premium Detail ($189)' },
                           { value: 'ultimate', label: 'Ultimate Showroom ($299)' },
                           { value: 'custom', label: 'Custom Service' }

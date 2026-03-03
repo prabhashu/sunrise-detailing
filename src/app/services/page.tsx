@@ -13,6 +13,7 @@ import {
   Trash2,
   Truck,
   Gauge,
+  Lightbulb,
   ShieldAlert } from
 'lucide-react';
 import { PricingPackages } from '@/components/PricingPackages';
@@ -57,6 +58,13 @@ const services = [
   title: 'Ceramic Coating',
   desc: 'Long-term protection & hydrophobic gloss',
   price: 'From $599'
+},
+{
+  id: 'headlight',
+  icon: Lightbulb,
+  title: 'Headlight Restoration',
+  desc: 'Restore clarity and improve nighttime visibility',
+  price: 'From $49'
 },
 {
   id: 'maintenance-membership',

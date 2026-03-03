@@ -1,13 +1,14 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +28,17 @@ export function Navbar() {
   },
   {
     name: 'Services',
-    href: '/services'
+    href: '/services',
+    dropdownItems: [
+      { name: 'View All Services', href: '/services' },
+      { name: 'Exterior Detailing', href: '/services/exterior' },
+      { name: 'Interior Detailing', href: '/services/interior' },
+      { name: 'Full Detail Packages', href: '/services/full' },
+      { name: 'Paint Correction', href: '/services/paint' },
+      { name: 'Ceramic Coating', href: '/services/ceramic' },
+      { name: 'Headlight Restoration', href: '/services/headlight' },
+      { name: 'Maintenance Membership', href: '/services/maintenance-membership' }
+    ]
   },
   {
     name: 'Service Areas',
@@ -70,13 +81,30 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) =>
-          <Link
-            key={link.name}
-            href={link.href}
-              className={`font-semibold transition-all duration-300 text-[13px] uppercase tracking-[0.15em] ${pathname === link.href ? 'text-sunrise-orange drop-shadow-[0_0_8px_rgba(255,138,0,0.5)]' : 'text-gray-300 hover:text-white'}`}>
-
-              {link.name}
-            </Link>
+            <div key={link.name} className="relative group">
+              <Link
+                href={link.href}
+                className={`font-semibold transition-all duration-300 text-[13px] uppercase tracking-[0.15em] flex items-center gap-1.5 ${pathname === link.href || pathname.startsWith(link.href + '/') && link.href !== '/' ? 'text-sunrise-orange drop-shadow-[0_0_8px_rgba(255,138,0,0.5)]' : 'text-gray-300 hover:text-white'}`}>
+                {link.name}
+                {link.dropdownItems && <ChevronDown size={14} className="transition-transform duration-300 group-hover:rotate-180" />}
+              </Link>
+              
+              {link.dropdownItems && (
+                <div className="absolute top-full left-0 pt-6 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 min-w-[260px] z-50">
+                  <div className="bg-[#0A111A]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-2 flex flex-col gap-1 overflow-hidden">
+                    {link.dropdownItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 cursor-pointer ${pathname === item.href ? 'bg-sunrise-orange/10 text-sunrise-orange' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           )}
           <Link href="?booking=true">
             <Button variant="primary" size="sm" icon={Phone}>
@@ -107,7 +135,7 @@ export function Navbar() {
               <div className="absolute top-[-10%] right-[-10%] w-[300px] h-[300px] bg-sunrise-orange/15 rounded-full blur-[100px] pointer-events-none" />
               <div className="absolute bottom-[-10%] left-[-10%] w-[250px] h-[250px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-              <div className="flex flex-col gap-6 relative z-10 w-full mt-4">
+              <div className="flex flex-col gap-4 relative z-10 w-full mt-4">
                 {navLinks.map((link, i) =>
                   <motion.div
                     key={link.name}
@@ -117,19 +145,53 @@ export function Navbar() {
                     transition={{ delay: i * 0.08, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     className="border-b border-white/5 pb-4"
                   >
-                    <Link
-                      href={link.href}
-                      className={`text-3xl sm:text-4xl font-black transition-colors uppercase tracking-tight flex items-center justify-between group ${pathname === link.href ? 'text-white' : 'text-gray-500 hover:text-gray-300'}`}>
-                      <span className="flex flex-col">
-                        {link.name}
-                        {pathname === link.href && (
-                          <motion.span layoutId="mobileNavActiveIndicator" className="block h-1.5 w-12 bg-sunrise-orange mt-2 rounded-full" />
+                    <div className="flex items-center justify-between w-full">
+                      <Link
+                        href={link.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`text-3xl sm:text-4xl font-black transition-colors uppercase tracking-tight flex-1 group ${pathname === link.href || pathname.startsWith(link.href + '/') && link.href !== '/' ? 'text-white' : 'text-gray-500 hover:text-gray-300'}`}>
+                        <span className="flex flex-col">
+                          {link.name}
+                          {(pathname === link.href || (pathname.startsWith(link.href + '/') && link.href !== '/')) && (
+                            <motion.span layoutId="mobileNavActiveIndicator" className="block h-1.5 w-12 bg-sunrise-orange mt-2 rounded-full" />
+                          )}
+                        </span>
+                      </Link>
+                      {link.dropdownItems && (
+                        <button 
+                          onClick={() => setMobileExpanded(mobileExpanded === link.name ? null : link.name)}
+                          className="p-2 ml-4 text-gray-400 hover:text-white bg-white/5 rounded-full"
+                        >
+                          <ChevronDown size={28} className={`transition-transform duration-300 ${mobileExpanded === link.name ? 'rotate-180' : ''}`} />
+                        </button>
+                      )}
+                    </div>
+                    
+                    {link.dropdownItems && (
+                      <AnimatePresence>
+                        {mobileExpanded === link.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="flex flex-col gap-4 pt-6 pl-4 border-l-2 border-white/10 ml-2 mt-2">
+                              {link.dropdownItems.map((item) => (
+                                <Link
+                                  key={item.href}
+                                  href={item.href}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className={`text-xl font-bold transition-colors ${pathname === item.href ? 'text-sunrise-orange' : 'text-gray-400 hover:text-white'}`}
+                                >
+                                  {item.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
                         )}
-                      </span>
-                      <span className={`text-2xl ${pathname === link.href ? 'text-sunrise-orange opacity-100' : 'opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0'} transition-all duration-300`}>
-                        &rarr;
-                      </span>
-                    </Link>
+                      </AnimatePresence>
+                    )}
                   </motion.div>
                 )}
               </div>

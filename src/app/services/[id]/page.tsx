@@ -102,6 +102,24 @@ const serviceData: Record<string, any> = {
     image:
     'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop'
   },
+  headlight: {
+    title: 'Headlight Restoration',
+    subtitle: 'Clear Visibility, Better Safety',
+    description:
+    'Restore clarity to cloudy, oxidized, or yellowed headlights. Our multi-stage sanding and polishing process completely removes oxidation, followed by a UV-resistant ceramic coating to keep them clear for years to come.',
+    price: 'From $49',
+    duration: '45 - 60 Minutes',
+    features: [
+    'Multi-stage wet sanding',
+    'Heavy compounding',
+    'Polishing for maximum clarity',
+    'UV-resistant ceramic coating application',
+    'Improved nighttime visibility',
+    'Enhanced vehicle appearance'],
+    
+    image:
+    'https://images.unsplash.com/photo-1543459176-4426b38cbb08?q=80&w=2070&auto=format&fit=crop'
+  },
   'maintenance-membership': {
     title: 'Maintenance Membership',
     subtitle: 'Regular Ongoing Care',
