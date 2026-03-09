@@ -9,38 +9,69 @@ const packageData: Record<string, any[]> = {
   'Popular Packages': [
     {
       name: 'Light Package',
-      price: '$89',
+      price: '$149',
       features: [
-      'Hand Wash & Dry',
-      'Wheel Cleaning',
-      'Tire Shine',
-      'Interior Vacuum',
-      'Window Cleaning'],
+        'Exterior Includes:',
+        'Spot-Free Foam Bath and Gentle Hand Wash',
+        'Deep Clean Wheels',
+        'Blow Dry and Microfiber Towel Dry',
+        'Tire Shine',
+        'Clean Door Jambs',
+        'Interior Includes:',
+        'Light Vacuum',
+        'Quick Blow Out of Cracks and Crevices',
+        'Light Wipe Down',
+        'Clean Windows'
+      ],
       cta: 'Book Light Package',
       highlight: false
     },
     {
-      name: 'Premium Detail',
+      name: 'Premium Package',
       price: '$189',
       features: [
-      'Everything in Light Package',
-      'Clay Bar Treatment',
-      'Spray Wax Protection',
-      'Leather Conditioning',
-      'Steam Cleaning'],
+        'Everything In Our Light Package, PLUS Everything Below:',
+        'Exterior Includes:',
+        'Premium 3-Month Wax/Sealant Protection',
+        'Dress Tires',
+        'Wheel Well Pressure Wash',
+        'Interior Includes:',
+        'Clean & Disinfect All Interior Surfaces',
+        'Leather Cleaning & Conditioning',
+        'Blow Out of Cracks & Crevices',
+        'Windows & Mirrors Cleaned',
+        'Floor Mats Detailed',
+        'Protect All Interior Plastic Surfaces',
+        'Full Trunk Detail',
+        'Air Freshener Treatment',
+        'Common Interior Add-Ons:',
+        'Shampoo Cloth Seats',
+        'Shampoo All Carpets'
+      ],
       cta: 'Book Premium',
       highlight: true
     },
     {
-      name: 'Ultimate Showroom',
-      price: '$299',
+      name: 'Diamond Package',
+      price: '$399',
       features: [
-      'Everything in Premium',
-      'Machine Polish',
-      'Ceramic Sealant',
-      'Engine Bay Detail',
-      'Odor Removal'],
-      cta: 'Book Ultimate',
+        'Everything In Our Light & Premium Package, PLUS Everything Below:',
+        'Exterior Includes:',
+        'Clay Bar Treatment and Paint Decontamination',
+        'Clean & Degrease Engine Bay',
+        'Dress Engine Bay',
+        'Restore Exterior Plastic Trim',
+        '8 to 12 months of Ceramic Sealant Protection',
+        'Interior Includes:',
+        'Steam Clean Vents, Dash, Nav Screen, Cup Holders, Door Panels & Interior Components',
+        'Clean All Buttons, Knobs, and Switches',
+        'Deep Condition Leather Seats',
+        'Shampoo Carpet, Trunk & Floor Mats',
+        'Shampoo Seats',
+        'Fabric Protection',
+        'Clean Headliner'
+      ],
+      cta: 'Book Diamond',
       highlight: false
     }
   ],
@@ -171,19 +202,24 @@ export function PricingPackages() {
                   {pkg.description}
                 </div>
               ) : (
-                <ul className="space-y-4 mb-8 flex-grow">
-                  {pkg.features.map((feat: string, i: number) =>
-                <li
-                  key={i}
-                  className="flex items-start gap-3 text-gray-600">
-
-                      <Check
-                    size={18}
-                    className="text-green-500 mt-1 shrink-0" />
-
-                      <span>{feat}</span>
-                    </li>
-                )}
+                <ul className="space-y-3 mb-8 flex-grow overflow-y-auto">
+                  {pkg.features.map((feat: string, i: number) => {
+                    const isHeader = feat.endsWith(':');
+                    return (
+                      <li
+                        key={i}
+                        className={`flex items-start text-gray-600 ${isHeader ? 'mt-6 mb-2 !text-sunrise-navy font-bold text-sm tracking-widest uppercase border-b border-gray-100 pb-2 first:mt-0' : 'gap-3'}`}
+                      >
+                        {!isHeader && (
+                          <Check
+                            size={18}
+                            className="text-green-500 mt-0.5 shrink-0"
+                          />
+                        )}
+                        <span className={isHeader ? 'w-full' : 'text-[15px] leading-snug'}>{feat}</span>
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
               <Link href="?booking=true" className="w-full">
