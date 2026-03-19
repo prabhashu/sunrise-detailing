@@ -31,12 +31,12 @@ export default function ContactPage() {
                   <h3 className="font-bold text-sunrise-navy mb-1">
                     Call or Text
                   </h3>
-                  <p className="text-gray-600">(555) 123-4567</p>
+                  <p className="text-gray-600">(813) 368-2733</p>
                 </GlassCard>
                 <GlassCard className="p-6 bg-white border-gray-100 shadow-md">
                   <Mail className="text-sunrise-orange mb-4" size={32} />
                   <h3 className="font-bold text-sunrise-navy mb-1">Email Us</h3>
-                  <p className="text-gray-600">info@sunrisedetailing.com</p>
+                   <p className="text-gray-600">Business@sunrisedetailing.com</p>
                 </GlassCard>
                 <GlassCard className="p-6 bg-white border-gray-100 shadow-md">
                   <MapPin className="text-sunrise-orange mb-4" size={32} />

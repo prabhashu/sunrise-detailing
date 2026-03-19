@@ -101,7 +101,7 @@ export function Hero() {
                 <span className="relative">Book Now</span>
                 <ArrowRight className="relative w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <a href="tel:+15551234567" className="group inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white px-6 py-3.5 md:px-8 md:py-4 rounded-full border border-white/10 font-bold text-base md:text-lg backdrop-blur-md w-full sm:w-auto transition-all hover:scale-105">
+              <a href="tel:+18133682733" className="group inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white px-6 py-3.5 md:px-8 md:py-4 rounded-full border border-white/10 font-bold text-base md:text-lg backdrop-blur-md w-full sm:w-auto transition-all hover:scale-105">
                 <Phone className="w-5 h-5" />
                 <span>Call Us</span>
               </a>

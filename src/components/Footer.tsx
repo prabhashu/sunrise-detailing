@@ -189,19 +189,19 @@ export function Footer() {
               <li className="flex flex-row items-center justify-center md:justify-start gap-3 text-gray-500">
                 <Phone className="w-5 h-5 text-sunrise-orange shrink-0" />
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+18133682733"
                   className="hover:text-sunrise-navy transition-colors">
 
-                  (555) 123-4567
+                  (813) 368-2733
                 </a>
               </li>
               <li className="flex flex-row items-center justify-center md:justify-start gap-3 text-gray-500">
                 <Mail className="w-5 h-5 text-sunrise-orange shrink-0" />
                 <a
-                  href="mailto:info@sunrisedetailing.com"
+                  href="mailto:Business@sunrisedetailing.com"
                   className="hover:text-sunrise-navy transition-colors">
 
-                  info@sunrisedetailing.com
+                  Business@sunrisedetailing.com
                 </a>
               </li>
             </ul>
