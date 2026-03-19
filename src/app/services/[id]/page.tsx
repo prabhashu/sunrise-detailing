@@ -69,7 +69,7 @@ const serviceData: Record<string, any> = {
     subtitle: 'Remove Swirls. Restore Gloss.',
     description:
     'Paint correction removes imperfections like swirl marks, light scratches, and oxidation. Performed in a controlled environment for optimal results.',
-    price: '$299',
+    price: 'Contact Us',
     duration: '4 - 6 Hours',
     features: [
     'Paint inspection & assessment',
@@ -107,7 +107,7 @@ const serviceData: Record<string, any> = {
     subtitle: 'Clear Visibility, Better Safety',
     description:
     'Restore clarity to cloudy, oxidized, or yellowed headlights. Our multi-stage sanding and polishing process completely removes oxidation, followed by a UV-resistant ceramic coating to keep them clear for years to come.',
-    price: 'From $49',
+    price: '$59',
     duration: '45 - 60 Minutes',
     features: [
     'Multi-stage wet sanding',
@@ -162,7 +162,7 @@ const serviceData: Record<string, any> = {
     subtitle: 'Safe & Effective Removal',
     description:
     'Mold in your vehicle is not just unsightly, it is a serious health hazard. Our professional remediation service uses hospital-grade disinfectants and ozone treatment to safely eliminate mold at its source and restore a healthy environment.',
-    price: 'From $149',
+    price: 'Contact Us',
     duration: '3 - 5 Hours',
     features: [
     'Complete interior assessment',
@@ -181,7 +181,7 @@ const serviceData: Record<string, any> = {
     subtitle: 'Eliminate Smells at the Source',
     description:
     'Professional odor elimination that targets the source, not just masks it. Perfect for smoke, pet, or food odors.',
-    price: '$79',
+    price: 'Contact Us',
     duration: '1 - 2 Hours',
     features: [
     'Source identification',

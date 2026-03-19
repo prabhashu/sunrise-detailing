@@ -37,6 +37,7 @@ export function Navbar() {
       { name: 'Paint Correction', href: '/services/paint' },
       { name: 'Ceramic Coating', href: '/services/ceramic' },
       { name: 'Headlight Restoration', href: '/services/headlight' },
+      { name: 'Mold Remediation', href: '/services/mold' },
       { name: 'Maintenance Membership', href: '/services/maintenance-membership' }
     ]
   },

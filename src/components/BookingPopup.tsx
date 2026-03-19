@@ -130,7 +130,7 @@ function BookingPopupContent() {
                           { value: '', label: 'Select a package...' },
                           { value: 'basic', label: 'Light Package ($149)' },
                           { value: 'premium', label: 'Premium Package ($189)' },
-                          { value: 'ultimate', label: 'Diamond Package ($399)' },
+                          { value: 'ultimate', label: 'Ultimate Package ($399)' },
                           { value: 'custom', label: 'Custom Service' }
                         ]}
                       />

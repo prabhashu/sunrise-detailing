@@ -10,13 +10,15 @@ const packageData: Record<string, any[]> = {
     {
       name: 'Light Package',
       price: '$149',
+      startingPrice: true,
       features: [
         'Exterior Includes:',
-        'Spot-Free Foam Bath and Gentle Hand Wash',
+        'Spot-Free Foam Bath',
+        'Gentle Hand Wash',
         'Deep Clean Wheels',
         'Blow Dry and Microfiber Towel Dry',
-        'Tire Shine',
         'Clean Door Jambs',
+        'Tire Shine',
         'Interior Includes:',
         'Light Vacuum',
         'Quick Blow Out of Cracks and Crevices',
@@ -29,6 +31,7 @@ const packageData: Record<string, any[]> = {
     {
       name: 'Premium Package',
       price: '$189',
+      startingPrice: true,
       features: [
         'Everything In Our Light Package, PLUS Everything Below:',
         'Exterior Includes:',
@@ -38,13 +41,12 @@ const packageData: Record<string, any[]> = {
         'Interior Includes:',
         'Clean & Disinfect All Interior Surfaces',
         'Leather Cleaning & Conditioning',
-        'Blow Out of Cracks & Crevices',
-        'Windows & Mirrors Cleaned',
         'Floor Mats Detailed',
         'Protect All Interior Plastic Surfaces',
         'Full Trunk Detail',
         'Air Freshener Treatment',
         'Common Interior Add-Ons:',
+        'Clay Bar Treatment and Paint Decontamination',
         'Shampoo Cloth Seats',
         'Shampoo All Carpets'
       ],
@@ -52,8 +54,9 @@ const packageData: Record<string, any[]> = {
       highlight: true
     },
     {
-      name: 'Diamond Package',
+      name: 'Ultimate Package',
       price: '$399',
+      startingPrice: true,
       features: [
         'Everything In Our Light & Premium Package, PLUS Everything Below:',
         'Exterior Includes:',
@@ -63,7 +66,7 @@ const packageData: Record<string, any[]> = {
         'Restore Exterior Plastic Trim',
         '8 to 12 months of Ceramic Sealant Protection',
         'Interior Includes:',
-        'Steam Clean Vents, Dash, Nav Screen, Cup Holders, Door Panels & Interior Components',
+        'Steam Clean all Interior Components',
         'Clean All Buttons, Knobs, and Switches',
         'Deep Condition Leather Seats',
         'Shampoo Carpet, Trunk & Floor Mats',
@@ -71,7 +74,7 @@ const packageData: Record<string, any[]> = {
         'Fabric Protection',
         'Clean Headliner'
       ],
-      cta: 'Book Diamond',
+      cta: 'Book Ultimate',
       highlight: false
     }
   ],
@@ -191,7 +194,7 @@ export function PricingPackages() {
               </div>
               {pkg.startingPrice ? (
                 <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">
-                  *Starting Price*
+                  Starting Price
                 </div>
               ) : (
                 <div className="mb-6"></div>

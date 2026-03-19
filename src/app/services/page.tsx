@@ -50,7 +50,7 @@ const services = [
   icon: Layers,
   title: 'Paint Correction',
   desc: 'Remove swirls, scratches & oxidation',
-  price: 'From $299'
+  price: 'Contact Us'
 },
 {
   id: 'ceramic',
@@ -64,7 +64,7 @@ const services = [
   icon: Lightbulb,
   title: 'Headlight Restoration',
   desc: 'Restore clarity and improve nighttime visibility',
-  price: 'From $49'
+  price: '$59'
 },
 {
   id: 'maintenance-membership',
@@ -85,14 +85,14 @@ const services = [
   icon: Trash2,
   title: 'Odor Removal',
   desc: 'Eliminate smells at the source',
-  price: 'From $79'
+  price: 'Contact Us'
 },
 {
   id: 'mold',
   icon: ShieldAlert,
   title: 'Mold Remediation',
   desc: 'Safe & professional biohazard removal',
-  price: 'From $149'
+  price: 'Contact Us'
 },
 {
   id: 'fleet',
